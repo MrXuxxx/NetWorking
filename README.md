@@ -1,6 +1,5 @@
 # NetWorking
-    第一次上传自己的代码，因为着急，没来得及整理，希望大家可以看得懂，如果看不懂可以及时给我留言。我会给大家梳理一下，当然这是第一个版本的断点续传，还有很多问题，我会在日后对此进行不断更新，不过正常的项目需求本人已经亲测过，没什么问题。其中ZSBreakPointDownload文件就是负责断点续传的，使用方法很简单，但是需要记住的是，- (NSURLSession *)backgroundSession;这个方法，如果需求有需要程序再次启动的时候继续下载，请记得在appDelegate中写下一下代码：
-
+第一次上传自己的代码，因为着急，没来得及整理，希望大家可以看得懂，如果看不懂可以及时给我留言。我会给大家梳理一下，当然这是第一个版本的断点续传，还有很多问题，我会在日后对此进行不断更新，不过正常的项目需求本人已经亲测过，没什么问题。其中ZSBreakPointDownload文件就是负责断点续传的，使用方法很简单，但是需要记住的是，- (NSURLSession *)backgroundSession;这个方法，如果需求有需要程序再次启动的时候继续下载，请记得在appDelegate中写下一下代码：
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

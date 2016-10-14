@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HEX-Wa-uh7">
+                                <rect key="frame" x="38" y="120" width="429" height="31"/>
+                            </slider>
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XwM-gV-H31">
+                                <rect key="frame" x="470" y="70" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="AcX-94-WkM"/>
+                                </constraints>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="beginDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ZR-mI-r2R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15R-BB-6vC">
+                                <rect key="frame" x="470" y="120" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="5aP-9x-umj"/>
+                                </constraints>
+                                <state key="normal" title="下载"/>
+                                <connections>
+                                    <action selector="beginDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ih-Ni-jFa"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="npo-uD-BW6">
+                                <rect key="frame" x="38" y="70" width="429" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="bVu-Fg-n8x"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bVu-Fg-n8x"/>
+                                    </mask>
+                                </variation>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="npo-uD-BW6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="5Lq-k6-biB"/>
+                            <constraint firstItem="HEX-Wa-uh7" firstAttribute="leading" secondItem="npo-uD-BW6" secondAttribute="leading" id="78Y-ST-mHs"/>
+                            <constraint firstItem="XwM-gV-H31" firstAttribute="leading" secondItem="npo-uD-BW6" secondAttribute="trailing" constant="5" id="L7U-3A-IrW"/>
+                            <constraint firstItem="HEX-Wa-uh7" firstAttribute="top" secondItem="npo-uD-BW6" secondAttribute="bottom" constant="20" id="RCz-MY-1W2"/>
+                            <constraint firstItem="15R-BB-6vC" firstAttribute="top" secondItem="HEX-Wa-uh7" secondAttribute="top" id="RQE-qy-BcG"/>
+                            <constraint firstItem="npo-uD-BW6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Vpx-QY-QOy"/>
+                            <constraint firstItem="15R-BB-6vC" firstAttribute="leading" secondItem="HEX-Wa-uh7" secondAttribute="trailing" constant="5" id="WWP-I8-QpZ"/>
+                            <constraint firstItem="HEX-Wa-uh7" firstAttribute="width" secondItem="npo-uD-BW6" secondAttribute="width" id="lIL-mH-g6y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XwM-gV-H31" secondAttribute="trailing" constant="50" id="mqX-DH-dhg"/>
+                            <constraint firstItem="XwM-gV-H31" firstAttribute="top" secondItem="npo-uD-BW6" secondAttribute="top" id="t8B-VJ-xLG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstSlider" destination="npo-uD-BW6" id="TAk-zn-y0i"/>
+                        <outlet property="secondSlider" destination="HEX-Wa-uh7" id="lup-NR-Srv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145" y="399"/>
+        </scene>
+    </scenes>
+</document>
